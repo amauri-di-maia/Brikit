@@ -1,0 +1,17 @@
+{
+  "name": "Brikit",
+  "dockerComposeFile": ["../docker-compose.yml"],
+  "service": "api",
+  "workspaceFolder": "/workspace/Brikit",
+  "forwardPorts": [3000, 8000, 5432],
+  "postCreateCommand": "cd /workspace/Brikit && npm --prefix apps/web install && python -m pip install -r apps/api/requirements.txt -r apps/api/requirements-dev.txt",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "esbenp.prettier-vscode",
+        "dbaeumer.vscode-eslint"
+      ]
+    }
+  }
+}
